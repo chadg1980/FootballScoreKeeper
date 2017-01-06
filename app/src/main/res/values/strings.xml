@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FootballScore</string>
+    <string name="game_info">"Seattle Seahawks host the Detroit Lions \nSaturday at 5:15pm PST"</string>
+    <string name="reset">Reset Score</string>
+    <string name="home">Home</string>
+    <string name="away">Away</string>
+    <string name="touchdown">"Touchdown \t+6"</string>
+    <string name="fieldgoal">"Fieldgoal \t+3</string>
+    <string name="safety">"Safety \t+2</string>
+    <string name="pat">"PAT \t+1</string>
+    <string name="startingScore">00</string>
+
+</resources>

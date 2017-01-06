@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.h.chad.footballscore.MainActivity">
+    <!-- Top half portion of the screen -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+        <!-- Screen split into two columns -->
+        <!-- Begin left side -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+            <!-- Home Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/uniform_bottom_margin"
+                android:paddingTop="10dp"
+                android:text="@string/home"
+                android:textColor="@color/whiteText"
+                android:textSize="@dimen/title"
+                android:textStyle="bold" />
+            <!-- Home Team Logo -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_marginBottom="@dimen/uniform_bottom_margin"
+                android:src="@drawable/sealogo" />
+            <!-- Home Score -->
+            <TextView
+                android:id="@+id/tv_homeScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/uniform_bottom_margin"
+                android:background="@color/whiteText"
+                android:paddingBottom="@dimen/score_box_height"
+                android:paddingLeft="@dimen/score_box_width"
+                android:paddingRight="@dimen/score_box_width"
+                android:paddingTop="@dimen/score_box_height"
+                android:text="@string/startingScore"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/score" />
+            <!-- Home touchdown button -->
+            <Button
+                android:id="@+id/button_homeTouchdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:layout_marginLeft="@dimen/button_margin_left_right"
+                android:layout_marginRight="@dimen/button_margin_left_right"
+                android:gravity="left|center_horizontal|center_vertical"
+                android:onClick="homeTouchDown"
+                android:text="@string/touchdown"
+                android:textColor="@color/whiteText" />
+            <!-- Home Fieldgoal button -->
+            <Button
+                android:id="@+id/button_homeFieldgoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:layout_marginLeft="@dimen/button_margin_left_right"
+                android:layout_marginRight="@dimen/button_margin_left_right"
+                android:gravity="left|center_horizontal|center_vertical"
+                android:onClick="homeFieldGoal"
+                android:text="@string/fieldgoal"
+                android:textColor="@color/whiteText" />
+            <!-- Home Safety button -->
+            <Button
+                android:id="@+id/button_homeSafety"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:layout_marginLeft="@dimen/button_margin_left_right"
+                android:layout_marginRight="@dimen/button_margin_left_right"
+                android:gravity="left|center_horizontal|center_vertical"
+                android:onClick="homeSafety"
+                android:text="@string/safety"
+                android:textColor="@color/whiteText" />
+            <!-- Home PAT button -->
+            <Button
+                android:id="@+id/button_homePAT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/button_margin_left_right"
+                android:layout_marginRight="@dimen/button_margin_left_right"
+                android:gravity="left|center_horizontal|center_vertical"
+                android:onClick="homePAT"
+                android:text="@string/pat"
+                android:textColor="@color/whiteText" />
+        </LinearLayout>
+        <!-- Begin right side -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/lions"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+            <!-- Away Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/uniform_bottom_margin"
+                android:paddingTop="10dp"
+                android:text="@string/away"
+                android:textColor="@color/whiteText"
+                android:textSize="@dimen/title"
+                android:textStyle="bold" />
+            <!-- Away logo -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_marginBottom="@dimen/uniform_bottom_margin"
+                android:src="@drawable/detlogo" />
+            <!-- Away Score Dispay-->
+            <TextView
+                android:id="@+id/tv_awayScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/uniform_bottom_margin"
+                android:background="@color/whiteText"
+                android:paddingBottom="@dimen/score_box_height"
+                android:paddingLeft="@dimen/score_box_width"
+                android:paddingRight="@dimen/score_box_width"
+                android:paddingTop="@dimen/score_box_height"
+                android:text="@string/startingScore"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/score" />
+            <!-- Away team Touchdown Button -->
+            <Button
+                android:id="@+id/button_awayTouchdown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:layout_marginLeft="@dimen/button_margin_left_right"
+                android:layout_marginRight="@dimen/button_margin_left_right"
+                android:gravity="left|center_horizontal|center_vertical"
+                android:onClick="awayTouchDown"
+                android:text="@string/touchdown"
+                android:textColor="@color/whiteText" />
+            <!-- Away team Fieldgoal button -->
+            <Button
+                android:id="@+id/button_awayFieldgoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:layout_marginLeft="@dimen/button_margin_left_right"
+                android:layout_marginRight="@dimen/button_margin_left_right"
+                android:gravity="left|center_horizontal|center_vertical"
+                android:onClick="awayFieldGoal"
+                android:text="@string/fieldgoal"
+                android:textColor="@color/whiteText" />
+            <!-- Away team Safety button -->
+            <Button
+                android:id="@+id/button_awaySafety"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:layout_marginLeft="@dimen/button_margin_left_right"
+                android:layout_marginRight="@dimen/button_margin_left_right"
+                android:gravity="left|center_horizontal|center_vertical"
+                android:onClick="awaySafety"
+                android:text="@string/safety"
+                android:textColor="@color/whiteText" />
+            <!-- Away team PAT button -->
+            <Button
+                android:id="@+id/button_awayPAT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/button_margin_left_right"
+                android:layout_marginRight="@dimen/button_margin_left_right"
+                android:gravity="left|center_horizontal|center_vertical"
+                android:onClick="awayPAT"
+                android:text="@string/pat"
+                android:textColor="@color/whiteText" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- Bottom portion of screen, reset button and game info -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark">
+        <!-- RESET BUTTON -->
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:onClick="resetScore"
+            android:padding="10dp"
+            android:text="@string/reset"
+            android:textColor="@color/whiteText" />
+        <!-- Current Game Info -->
+        <TextView
+            android:id="@+id/tv_currentGameInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/game_info"
+            android:textColor="@color/blackText" />
+    </RelativeLayout>
+</LinearLayout>
